@@ -1,0 +1,22 @@
+
+    <%- include("./componentes/header") %>
+    <div class="container text-center">
+        <h1>Minha página principal</h1>
+        <div class="card">
+            <div class="card-body">
+                <small>Aluno: Aislan Almeida</small>
+            </div>
+        </div>
+    </div>
+    <% if(error){ %>
+    <div class="container text-center">
+        <div class="card">
+            <div class="card-body">
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+    <%- include("./componentes/footer") %>

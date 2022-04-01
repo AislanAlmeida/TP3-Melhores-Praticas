@@ -1,0 +1,40 @@
+<%- include("./componentes/header") %>
+<div class="container">
+    <h2>Lista de Cadastros</h2>
+    <a role="button" class="btn btn-success btn-sm" href="/alunos/cadastrar">+ Adicionar</a>
+    <hr>
+    <div class="row">
+
+        <% alunos.forEach( aluno => {%>
+
+            <div class="col col-12 col-md-3">
+    
+                <div class="card mb-1" name="cardAluno">
+                    <div class="card-body">
+                        <h4 class="card-title"><%= aluno.nome.props.value %></h4>
+                        <div class="mb-1">
+                                <label class="form-label">Id:</label>
+                                <input type="text" class="form-control" disabled value="<%= aluno.id %>">
+                                <label class="form-label">Nome:</label>
+                                <input type="text" class="form-control"  disabled value="<%= aluno.nome.props.value %>">
+                                <label for="exampleFormControlInput1" class="form-label">Email:</label>
+                                <input type="email" class="form-control"  disabled value="<%= aluno.email %>">
+                                <label class="form-label">Matricula:</label>
+                                <input type="text" class="form-control" disabled value="<%= aluno.matricula %>">
+                                <hr>
+                                <form action="" me>
+                                    <button type="button" class="btn btn-outline-primary" id="<%= aluno.id %>" onclick="handleUpdateAluno(event)">Alterar</button>
+                                    <button type="button" class="btn btn-danger" id="<%= aluno.id %>" onclick="handleDeleteAluno(event)">Excluir</button>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        <%})%>
+
+
+
+    </div>
+</div>
+<%- include("./componentes/footer") %>

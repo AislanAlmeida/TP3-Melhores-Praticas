@@ -1,0 +1,23 @@
+<%- include("./componentes/header") %>
+<div class="container">
+    <h1>Cadastrando</h1>
+    <hr>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Novo:</h4>
+            <div class="mb-3">
+                <form action="/alunos/" method="post">
+                    <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="João da Silva" name="nome">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+                    <label for="exampleFormControlInput1" class="form-label">Matricula</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="52525M-XPTO" name="matricula">
+                    <hr>
+                    <button class="btn btn-primary" type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include("./componentes/footer") %>
