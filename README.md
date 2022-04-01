@@ -4,6 +4,7 @@ Aluno: Aislan Almeida
 
 ## Instalação
 > npm install
+
 > npm run dev
 
 # Automação com Selenium
